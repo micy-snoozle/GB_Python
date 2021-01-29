@@ -22,3 +22,34 @@ def my_func():
         print(f'Сумма введенных чисел равна: {sum_res}')
     print(f'Итоговая сумма чисел равна: {sum_res}')
 my_func()
+
+
+# правильный вариант решения (после разбора на уроке)
+
+# Вариант 1
+def sum_num():
+    s = 0
+    while True:
+        in_list = input('Enter a number, input q to exit: ').split()
+        for num in in_list:
+            if num == 'q':
+                return s
+            else:
+                try:
+                    s += int(num)
+                except ValueError:
+                    print('To exit the program, enter - "q".')
+        print(f'Sum of numbers = {s}')
+
+
+print(sum_num())
+
+# Вариант 2
+num = 0
+try:
+    while num != '#':
+        for i in map(int, input('Для выхода наберите "#"\nВведите числа, используя пробел\n').split()):
+            num += i
+        print(num)
+except ValueError:
+    print(num)
