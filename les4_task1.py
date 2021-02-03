@@ -10,3 +10,14 @@ employee, production, rate, premium = argv
 result = (int(production) * int(rate)) + int(premium)
 print(f'Ваша заработная плата равна: {result}')
 
+
+# правильный вариант решения (после разбора на уроке)
+
+def salary():
+    try:
+        time, rate, bonus = map(float, argv[1:])
+        print(f'salary - {time * rate + bonus}')
+    except ValueError:
+        print('enter aal 3 numbers. not string or empty character.')
+
+salary()

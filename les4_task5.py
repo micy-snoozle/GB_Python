@@ -15,3 +15,9 @@ print(f'Список всех четных чисел: {[el for el in range(100,
 print(
     f'Результат вычисления произведения всех элементов списка: '
     f'{reduce(my_func, [el for el in range(100, 1000) if el % 2 == 0])}')
+
+# правильный вариант решения (после разбора на уроке)
+
+from functools import reduce
+
+print(reduce(lambda a, b: a * b, [x for x in range(100, 1001, 2)]))
