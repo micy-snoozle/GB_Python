@@ -35,5 +35,5 @@ date_class = Date.date_str(a)
 date_static = Date.date_valid(a)
 
 b = '32-13-3001'
-date_class = Date.date_str(b)
-date_static = Date.date_valid(b)
+date_class_err = Date.date_str(b)
+date_static_err = Date.date_valid(b)
